@@ -4,7 +4,6 @@ cor_to_cov <- function(R, SD){
   } else if (nrow(R)!=length(SD)){
     stop("The number of variables of correlation matrix and SD vector are dirfferent.")
   }
-  num_var <- nrow(R)
   D <- diag(SDs)
   V <- D %*% R %*% D
   rownames(V) <- rownames(R)
